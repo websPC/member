@@ -31,8 +31,8 @@ Form::~Form()
 
 void Form::on_pushButton_clicked()
 {
-    edit *new_edit = new edit(0, model);
-    new_edit->show();
+//    edit *new_edit = new edit(0, model);
+//    new_edit->show();
 }
 
 void Form:: on_listWidget_2_itemClicked(QListWidgetItem *item){
