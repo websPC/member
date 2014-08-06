@@ -1,10 +1,14 @@
 #include "main.h"
 #include "ui_form.h"
+#include <time.h>
 
 Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *board) :
     QWidget(parent),
     ui(new Ui::Form)
 {
+
+
+
     ui->setupUi(this);
     this->model = model;
     ui->tableView_6->setModel(model);
@@ -22,6 +26,8 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *board) :
 
     view_NotMember->setQuery("select * from person where level = 1");
     ui->tableView_4->setModel(view_NotMember);
+
+
 }
 
 Form::~Form()
@@ -82,3 +88,8 @@ void Form::on_pushButton_6_clicked()
 //    ui->tableView_6->setModel(view_returntable);
     ui->tableView_6->setModel(model);
 }
+
+ void Form::on_listWidget_2_activated(const QModelIndex &index)
+ {
+
+ }
