@@ -42,7 +42,7 @@
     <enum>QTabWidget::West</enum>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>1</number>
    </property>
    <property name="usesScrollButtons">
     <bool>true</bool>
@@ -70,7 +70,7 @@
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <property name="iconSize">
       <size>
@@ -182,51 +182,62 @@
     <widget class="QLineEdit" name="lineEdit_2">
      <property name="geometry">
       <rect>
-       <x>550</x>
-       <y>0</y>
-       <width>150</width>
-       <height>20</height>
+       <x>511</x>
+       <y>1</y>
+       <width>163</width>
+       <height>19</height>
       </rect>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_5">
      <property name="geometry">
       <rect>
-       <x>710</x>
-       <y>0</y>
+       <x>680</x>
+       <y>-1</y>
        <width>25</width>
        <height>25</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <stylestrategy>PreferAntialias</stylestrategy>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/Search.png);</string>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="icon">
-      <iconset>
-       <normaloff>../비둘기/member/images.jpg</normaloff>../비둘기/member/images.jpg</iconset>
+      <iconset resource="QTimg.qrc">
+       <normaloff>:/new/prefix1/Search.png</normaloff>:/new/prefix1/Search.png</iconset>
      </property>
      <property name="iconSize">
       <size>
-       <width>25</width>
-       <height>25</height>
+       <width>21</width>
+       <height>21</height>
       </size>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_6">
      <property name="geometry">
       <rect>
-       <x>740</x>
-       <y>0</y>
+       <x>710</x>
+       <y>-1</y>
        <width>25</width>
        <height>25</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/new/prefix1/refresh.png);</string>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="icon">
-      <iconset>
-       <normaloff>../비둘기/member/images.jpg</normaloff>../비둘기/member/images.jpg</iconset>
+      <iconset resource="QTimg.qrc">
+       <normaloff>:/new/prefix1/refresh.png</normaloff>:/new/prefix1/refresh.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -274,36 +285,29 @@
       <widget class="QListWidget" name="listWidget_2">
        <property name="geometry">
         <rect>
-         <x>0</x>
+         <x>170</x>
          <y>0</y>
-         <width>771</width>
-         <height>571</height>
+         <width>401</width>
+         <height>601</height>
         </rect>
        </property>
-       <property name="currentRow">
-        <number>-1</number>
+       <property name="font">
+        <font>
+         <pointsize>25</pointsize>
+        </font>
        </property>
-       <item>
-        <property name="text">
-         <string>Today</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>30</pointsize>
-         </font>
-        </property>
-        <property name="textAlignment">
-         <set>AlignHCenter|AlignVCenter|AlignCenter</set>
-        </property>
-       </item>
+       <property name="textElideMode">
+        <enum>Qt::ElideMiddle</enum>
+       </property>
+       <property name="gridSize">
+        <size>
+         <width>0</width>
+         <height>50</height>
+        </size>
+       </property>
        <item>
         <property name="text">
          <string>+</string>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>30</pointsize>
-         </font>
         </property>
         <property name="textAlignment">
          <set>AlignHCenter|AlignVCenter|AlignCenter</set>
@@ -778,6 +782,8 @@ p, li { white-space: pre-wrap; }
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="QTimg.qrc"/>
+ </resources>
  <connections/>
 </ui>
