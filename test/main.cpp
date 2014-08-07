@@ -17,7 +17,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QODBC3");
-    db.setDatabaseName("Driver={SQL Server Native Client 10.0};Server=tcp:q07m0fx4lg.database.windows.net;Port=1443;Database=WPG_DB;");
+    db.setDatabaseName("Driver={SQL Server};Server=tcp:q07m0fx4lg.database.windows.net;Port=1443;Database=WPG_DB;");
     db.setUserName("WPG_DB@q07m0fx4lg");
     db.setPassword("!Greatewebs");
     if(!db.open()){
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     else{
         qDebug() << "Error = " << QSqlError(db.lastError()).text();
     }
-    //qry.exec("create table pctest")
+    qry.exec("create table pctest(id int primary key, name varchar(20), major varchar(20))");
     /*
     QSqlQueryModel *model = new QSqlQueryModel;
     model->setQuery("SELECT * [WPG_DB].[dbo].[person]", db);
