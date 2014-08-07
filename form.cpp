@@ -9,7 +9,7 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *board) :
     ui->setupUi(this);
     this->model = model;
     QSqlQueryModel *Main = new QSqlQueryModel();
-    Main->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member");
+    Main->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where Level > 1");
     ui->tableView_6->setModel(Main);
     this->board = board;
 
@@ -80,10 +80,10 @@ void Form::on_pushButton_5_clicked()
 }
 void Form::on_pushButton_6_clicked()
 {
-//    QSqlQueryModel *view_returntable = new QSqlQueryModel();
-//    view_returntable->setQuery("select * from person ");
+    QSqlQueryModel *view_returntable = new QSqlQueryModel();
+    view_returntable->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member ");
 //    ui->tableView_6->setModel(view_returntable);
-    ui->tableView_6->setModel(model);
+    ui->tableView_6->setModel(view_returntable);
 }
 
  void Form::on_listWidget_2_activated(const QModelIndex &index)
