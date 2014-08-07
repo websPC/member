@@ -8,20 +8,22 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *board) :
 {
     ui->setupUi(this);
     this->model = model;
-    ui->tableView_6->setModel(model);
+    QSqlQueryModel *Main = new QSqlQueryModel();
+    Main->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member");
+    ui->tableView_6->setModel(Main);
     this->board = board;
 
     QSqlQueryModel *view_OB = new QSqlQueryModel();
     QSqlQueryModel *view_YB = new QSqlQueryModel();
     QSqlQueryModel *view_NotMember = new QSqlQueryModel();
 
-    view_OB->setQuery("select * from person where graduate = 'Yes'");
+    view_OB->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where Grd = 'YES'");
     ui->tableView_5->setModel(view_OB);
 
-    view_YB->setQuery("select * from person where graduate = 'No'");
+    view_YB->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where Grd = 'NO'");
     ui->tableView_3->setModel(view_YB);
 
-    view_NotMember->setQuery("select * from person where level = 1");
+    view_NotMember->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where level = 1");
     ui->tableView_4->setModel(view_NotMember);
 }
 
@@ -32,8 +34,8 @@ Form::~Form()
 
 void Form::on_pushButton_clicked()
 {
-//    edit *new_edit = new edit(0, model);
-//    new_edit->show();
+    edit *new_edit = new edit(0, model);
+    new_edit->show();
 }
 
 void Form:: on_listWidget_2_itemClicked(QListWidgetItem *item){
@@ -69,7 +71,7 @@ void Form::on_pushButton_5_clicked()
     QSqlQueryModel *view_FindMember = new QSqlQueryModel();
     QSqlQuery *query = new QSqlQuery;
 
-    query->prepare("select * from person where name = ? ");
+    query->prepare("select * from member where name = ? ");
     query->addBindValue(temp);
     query->exec();
     view_FindMember->setQuery(*query);

@@ -42,7 +42,7 @@
     <enum>QTabWidget::West</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <property name="usesScrollButtons">
     <bool>true</bool>
@@ -433,7 +433,7 @@ p, li { white-space: pre-wrap; }
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>../../Desktop/e3xl.jpg</pixmap>
+        <pixmap>../e3xl.jpg</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -643,7 +643,7 @@ p, li { white-space: pre-wrap; }
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>../../Desktop/tool_srch1.png</normaloff>../../Desktop/tool_srch1.png</iconset>
+            <normaloff>../tool_srch1.png</normaloff>../tool_srch1.png</iconset>
           </property>
          </widget>
         </item>
