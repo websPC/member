@@ -15,6 +15,7 @@ edit::~edit()
     delete ui;
 }
 
+
 void edit::on_pushButton_clicked()
 {
     QString ID = ui->textEdit->toPlainText();
