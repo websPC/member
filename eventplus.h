@@ -25,7 +25,7 @@ public:
     Ui::EventPlus *ui;
 
 private slots:
-    void on_listWidget_itemClicked(QListWidgetItem *item);
+   // void on_listWidget_itemClicked(QListWidgetItem *item);
 };
 
 #endif // EVENTPLUS_H
