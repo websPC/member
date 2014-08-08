@@ -13,7 +13,7 @@ EventEdit::EventEdit(QWidget *parent, QString title, QSqlTableModel *schedule, Q
     this->row = row;
     QSqlQueryModel *query = new QSqlQueryModel;
     QSqlQuery qry;
-    qry.prepare("select * from board where title = ?");
+    qry.prepare("select * from schedule where title = ?");
     qry.addBindValue(title);
     qry.exec();
     query->setQuery(qry);

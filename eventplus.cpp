@@ -11,9 +11,15 @@ EventPlus::EventPlus(QWidget *parent, QString date, QSqlTableModel *schedule) :
     this->schedule = schedule;
 
     ui->label->setText(date.left(4)+"/"+date.mid(4,2)+"/"+date.right(2));
+    ui->toolBox_2->removeItem(0);
     for(int i = 0; i < schedule->rowCount(); i++){
         if(schedule->record(i).value("Date").toString() == date){
 //            ui->listWidget->addItem(schedule->record(i).value("Title").toString());
+            QLabel *label;
+            label = new QLabel;
+            label->setStyleSheet("font: 13pt \"1훈버거버거 Regular\";");
+            label->setText(schedule->record(i).value("Contents").toString());
+            ui->toolBox_2->addItem(label ,schedule->record(i).value("Title").toString());
 
         }
     }
@@ -40,3 +46,9 @@ EventPlus::~EventPlus()
 //    EventEdit *new_page = new EventEdit(0, title, schedule, date, row);
 //    new_page->show();
 //}
+
+void EventPlus::on_pushButton_3_clicked()
+{
+        EventEdit *new_page = new EventEdit(0, title, schedule, date, row);
+        new_page->show();
+}

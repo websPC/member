@@ -13,6 +13,7 @@
   <property name="font">
    <font>
     <family>1훈버거버거 Regular</family>
+    <pointsize>10</pointsize>
    </font>
   </property>
   <property name="windowTitle">
@@ -21,6 +22,29 @@
   <property name="windowIcon">
    <iconset>
     <normaloff>../../../A/Desktop/1404296263554.jpeg</normaloff>../../../A/Desktop/1404296263554.jpeg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+color: #b1b1b1;
+background-color: #323232;
+}
+QWidget:item:hover
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #ca0619);
+    color: #000000;
+}
+
+QWidget:item:selected
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
+
+QWidget:disabled
+{
+    color: #404040;
+    background-color: #323232;
+}</string>
   </property>
   <widget class="QTextEdit" name="textEdit">
    <property name="geometry">
@@ -42,13 +66,23 @@
      border: 2px solid #8f8f91;
      border-radius: 6px;
     }
-</string>
+QTextEdit:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
+QTextEdit:focus
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}</string>
    </property>
    <property name="verticalScrollBarPolicy">
     <enum>Qt::ScrollBarAlwaysOff</enum>
    </property>
    <property name="horizontalScrollBarPolicy">
     <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="tabChangesFocus">
+    <bool>true</bool>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -81,13 +115,24 @@ p, li { white-space: pre-wrap; }
      border: 2px solid #8f8f91;
      border-radius: 6px;
     }
-</string>
+QTextEdit:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
+
+QTextEdit:focus
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}</string>
    </property>
    <property name="verticalScrollBarPolicy">
     <enum>Qt::ScrollBarAlwaysOff</enum>
    </property>
    <property name="horizontalScrollBarPolicy">
     <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="tabChangesFocus">
+    <bool>true</bool>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -120,13 +165,24 @@ p, li { white-space: pre-wrap; }
      border: 2px solid #8f8f91;
      border-radius: 6px;
     }
-</string>
+QTextEdit:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
+
+QTextEdit:focus
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}</string>
    </property>
    <property name="verticalScrollBarPolicy">
     <enum>Qt::ScrollBarAlwaysOff</enum>
    </property>
    <property name="horizontalScrollBarPolicy">
     <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="tabChangesFocus">
+    <bool>true</bool>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -156,13 +212,24 @@ p, li { white-space: pre-wrap; }
      border: 2px solid #8f8f91;
      border-radius: 6px;
     }
-</string>
+QTextEdit:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
+
+QTextEdit:focus
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}</string>
    </property>
    <property name="verticalScrollBarPolicy">
     <enum>Qt::ScrollBarAlwaysOff</enum>
    </property>
    <property name="horizontalScrollBarPolicy">
     <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="tabChangesFocus">
+    <bool>true</bool>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -192,13 +259,24 @@ p, li { white-space: pre-wrap; }
      border: 2px solid #8f8f91;
      border-radius: 6px;
     }
-</string>
+QTextEdit:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
+
+QTextEdit:focus
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}</string>
    </property>
    <property name="verticalScrollBarPolicy">
     <enum>Qt::ScrollBarAlwaysOff</enum>
    </property>
    <property name="horizontalScrollBarPolicy">
     <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="tabChangesFocus">
+    <bool>true</bool>
    </property>
    <property name="html">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -224,63 +302,54 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QComboBox {
-     border: 2px solid gray;
-     border-radius: 5px;
-     padding: 1px 18px 1px 3px;
-     min-width: 6em;
- }
+    <string notr="true">QComboBox
+{
+    selection-background-color: #ffaa00;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
+    border: 2px solid #8f8f91;
+     border-radius: 6px;   
+}
 
- QComboBox:editable {
-     background: white;
- }
+QComboBox:hover,QPushButton:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
 
- QComboBox:!editable, QComboBox::drop-down:editable {
-      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                  stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
-                                  stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
- }
 
- /* QComboBox gets the &quot;on&quot; state when the popup is open */
- QComboBox:!editable:on, QComboBox::drop-down:editable:on {
-     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                 stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,
-                                 stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);
- }
+QComboBox:on
+{
+    padding-top: 3px;
+    padding-left: 4px;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+    selection-background-color: #ffaa00;
+}
 
- QComboBox:on { /* shift the text when the popup opens */
-     padding-top: 3px;
-     padding-left: 4px;
- }
+QComboBox QAbstractItemView
+{
+    border: 2px solid darkgray;
+    selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
 
- QComboBox::drop-down {
+QComboBox::drop-down
+{
      subcontrol-origin: padding;
      subcontrol-position: top right;
      width: 15px;
 
-     border-left-width: 1px;
+     border-left-width: 0px;
      border-left-color: darkgray;
      border-left-style: solid; /* just a single line */
-     border-top-right-radius: 5px; /* same radius as the QComboBox */
-     border-bottom-right-radius: 5px;
+     border-top-right-radius: 3px; /* same radius as the QComboBox */
+     border-bottom-right-radius: 3px;
  }
 
- QComboBox::down-arrow {
-     
-	
-	
+QComboBox::down-arrow
+{
+    
 	image: url(:/new/prefix1/arrow_down.png);
- }
+}
 
- QComboBox::down-arrow:on { /* shift the arrow when popup is open */
-     top: 1px;
-     left: 1px;
- }
-
- QComboBox QAbstractItemView {
-     border: 2px solid darkgray;
-     selection-background-color: lightgray;
- }</string>
+</string>
    </property>
    <item>
     <property name="text">
@@ -309,62 +378,54 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QComboBox {
-     border: 2px solid gray;
-     border-radius: 5px;
-     padding: 1px 18px 1px 3px;
-     min-width: 6em;
- }
+    <string notr="true">QComboBox
+{
+    selection-background-color: #ffaa00;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
+    border: 2px solid #8f8f91;
+     border-radius: 6px;   
+}
 
- QComboBox:editable {
-     background: white;
- }
+QComboBox:hover,QPushButton:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
 
- QComboBox:!editable, QComboBox::drop-down:editable {
-      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                  stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
-                                  stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
- }
 
- /* QComboBox gets the &quot;on&quot; state when the popup is open */
- QComboBox:!editable:on, QComboBox::drop-down:editable:on {
-     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                 stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,
-                                 stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);
- }
+QComboBox:on
+{
+    padding-top: 3px;
+    padding-left: 4px;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+    selection-background-color: #ffaa00;
+}
 
- QComboBox:on { /* shift the text when the popup opens */
-     padding-top: 3px;
-     padding-left: 4px;
- }
+QComboBox QAbstractItemView
+{
+    border: 2px solid darkgray;
+    selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
 
- QComboBox::drop-down {
+QComboBox::drop-down
+{
      subcontrol-origin: padding;
      subcontrol-position: top right;
      width: 15px;
 
-     border-left-width: 1px;
+     border-left-width: 0px;
      border-left-color: darkgray;
      border-left-style: solid; /* just a single line */
-     border-top-right-radius: 5px; /* same radius as the QComboBox */
-     border-bottom-right-radius: 5px;
+     border-top-right-radius: 3px; /* same radius as the QComboBox */
+     border-bottom-right-radius: 3px;
  }
 
- QComboBox::down-arrow {
-     
-	
+QComboBox::down-arrow
+{
+    
 	image: url(:/new/prefix1/arrow_down.png);
- }
+}
 
- QComboBox::down-arrow:on { /* shift the arrow when popup is open */
-     top: 1px;
-     left: 1px;
- }
-
- QComboBox QAbstractItemView {
-     border: 2px solid darkgray;
-     selection-background-color: lightgray;
- }</string>
+</string>
    </property>
    <item>
     <property name="text">
@@ -393,62 +454,54 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">QComboBox {
-     border: 2px solid gray;
-     border-radius: 5px;
-     padding: 1px 18px 1px 3px;
-     min-width: 6em;
- }
+    <string notr="true">QComboBox
+{
+    selection-background-color: #ffaa00;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
+    border: 2px solid #8f8f91;
+     border-radius: 6px;   
+}
 
- QComboBox:editable {
-     background: white;
- }
+QComboBox:hover,QPushButton:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
 
- QComboBox:!editable, QComboBox::drop-down:editable {
-      background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                  stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
-                                  stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
- }
 
- /* QComboBox gets the &quot;on&quot; state when the popup is open */
- QComboBox:!editable:on, QComboBox::drop-down:editable:on {
-     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                 stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,
-                                 stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);
- }
+QComboBox:on
+{
+    padding-top: 3px;
+    padding-left: 4px;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+    selection-background-color: #ffaa00;
+}
 
- QComboBox:on { /* shift the text when the popup opens */
-     padding-top: 3px;
-     padding-left: 4px;
- }
+QComboBox QAbstractItemView
+{
+    border: 2px solid darkgray;
+    selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}
 
- QComboBox::drop-down {
+QComboBox::drop-down
+{
      subcontrol-origin: padding;
      subcontrol-position: top right;
      width: 15px;
 
-     border-left-width: 1px;
+     border-left-width: 0px;
      border-left-color: darkgray;
      border-left-style: solid; /* just a single line */
-     border-top-right-radius: 5px; /* same radius as the QComboBox */
-     border-bottom-right-radius: 5px;
+     border-top-right-radius: 3px; /* same radius as the QComboBox */
+     border-bottom-right-radius: 3px;
  }
 
- QComboBox::down-arrow {
-     
-	
+QComboBox::down-arrow
+{
+    
 	image: url(:/new/prefix1/arrow_down.png);
- }
+}
 
- QComboBox::down-arrow:on { /* shift the arrow when popup is open */
-     top: 1px;
-     left: 1px;
- }
-
- QComboBox QAbstractItemView {
-     border: 2px solid darkgray;
-     selection-background-color: lightgray;
- }</string>
+</string>
    </property>
    <item>
     <property name="text">
@@ -477,26 +530,28 @@ p, li { white-space: pre-wrap; }
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true"> QPushButton {
-     border: 2px solid #8f8f91;
-     border-radius: 6px;
-     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
-     min-width: 80px;
- }
+    <string notr="true">QPushButton
+{
+    color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
+ border: 2px solid #8f8f91;
+     border-radius: 6px;   
+ 
+    padding: 3px;
+   
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
- QPushButton:pressed {
-     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
- }
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}
 
- QPushButton:flat {
-     border: none; /* no border for a flat push button */
- }
-
- QPushButton:default {
-     border-color: navy; /* make the default button prominent */
- }</string>
+QPushButton:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}</string>
    </property>
    <property name="text">
     <string>Save</string>
@@ -507,12 +562,13 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>91</x>
      <y>70</y>
-     <width>31</width>
+     <width>21</width>
      <height>25</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>1훈버거버거 Regular</family>
      <pointsize>13</pointsize>
     </font>
    </property>
@@ -531,12 +587,13 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>68</x>
      <y>110</y>
-     <width>41</width>
+     <width>51</width>
      <height>25</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>1훈버거버거 Regular</family>
      <pointsize>13</pointsize>
     </font>
    </property>
@@ -561,6 +618,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="font">
     <font>
+     <family>1훈버거버거 Regular</family>
      <pointsize>13</pointsize>
     </font>
    </property>
@@ -585,6 +643,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="font">
     <font>
+     <family>1훈버거버거 Regular</family>
      <pointsize>13</pointsize>
     </font>
    </property>
@@ -609,6 +668,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="font">
     <font>
+     <family>1훈버거버거 Regular</family>
      <pointsize>13</pointsize>
     </font>
    </property>
@@ -633,6 +693,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="font">
     <font>
+     <family>1훈버거버거 Regular</family>
      <pointsize>13</pointsize>
     </font>
    </property>
@@ -657,6 +718,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="font">
     <font>
+     <family>1훈버거버거 Regular</family>
      <pointsize>13</pointsize>
     </font>
    </property>
@@ -681,6 +743,7 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="font">
     <font>
+     <family>1훈버거버거 Regular</family>
      <pointsize>13</pointsize>
     </font>
    </property>
@@ -708,7 +771,6 @@ p, li { white-space: pre-wrap; }
      border-radius: 6px;
      padding: 2px;</string>
    </property>
-   <zorder>label_8</zorder>
   </widget>
   <widget class="QLabel" name="label_8">
    <property name="geometry">
@@ -736,7 +798,7 @@ p, li { white-space: pre-wrap; }
     <string notr="true"/>
    </property>
    <property name="autoFillBackground">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="text">
     <string> Member Edit</string>

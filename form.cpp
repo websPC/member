@@ -7,12 +7,15 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule) :
     ui(new Ui::Form)
 {
     ui->setupUi(this);
-    this->model = model;
+
+            this->model = model;
     this->schedule = schedule;
 
     QSqlQueryModel *Main = new QSqlQueryModel();
     Main->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where Level > 1");
-    ui->tableView_6->setModel(Main);    
+    ui->tableView_6->setModel(Main);
+    ui->tableView_6->resizeColumnsToContents();
+
 
     QSqlQueryModel *view_OB = new QSqlQueryModel();
     QSqlQueryModel *view_YB = new QSqlQueryModel();
@@ -20,12 +23,13 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule) :
 
     view_OB->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where Grd = 'YES'");
     ui->tableView_5->setModel(view_OB);
-
+ui->tableView_5->resizeColumnsToContents();
     view_YB->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where Grd = 'NO'");
     ui->tableView_3->setModel(view_YB);
-
+ui->tableView_3->resizeColumnsToContents();
     view_NotMember->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where level = 1");
     ui->tableView_4->setModel(view_NotMember);
+    ui->tableView_4->resizeColumnsToContents();
 }
 
 Form::~Form()
@@ -77,14 +81,15 @@ void Form::on_pushButton_5_clicked()
     query->exec();
     view_FindMember->setQuery(*query);
     ui->tableView_6->setModel(view_FindMember);
+    ui->tableView_6->resizeColumnsToContents();
     ui->lineEdit_2->setText("");
 }
 void Form::on_pushButton_6_clicked()
 {
     QSqlQueryModel *view_returntable = new QSqlQueryModel();
     view_returntable->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where Level > 1");
-//    ui->tableView_6->setModel(view_returntable);
     ui->tableView_6->setModel(view_returntable);
+    //ui->tableView_6->resizeColumnsToContents();
 }
 
  void Form::on_listWidget_2_activated(const QModelIndex &index)

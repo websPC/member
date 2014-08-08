@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="/new/prefix1">
+    <file>right_arr.png</file>
     <file>arrow_down.png</file>
     <file>loginIMG.png</file>
     <file>logo.png</file>

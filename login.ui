@@ -31,26 +31,28 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true"> QPushButton {
-     border: 2px solid #8f8f91;
-     border-radius: 6px;
-     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
-     min-width: 80px;
- }
+    <string notr="true">QPushButton
+{
+    color: #b1b1b1;
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
+ border: 2px solid #8f8f91;
+     border-radius: 6px;   
+ 
+    padding: 3px;
+   
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
- QPushButton:pressed {
-     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
- }
+QPushButton:pressed
+{
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+}
 
- QPushButton:flat {
-     border: none; /* no border for a flat push button */
- }
-
- QPushButton:default {
-     border-color: navy; /* make the default button prominent */
- }</string>
+QPushButton:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}</string>
    </property>
    <property name="text">
     <string>로그인</string>
@@ -70,7 +72,10 @@
      border: 2px solid #8f8f91;
      border-radius: 6px;
     }
-</string>
+QLineEdit:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -106,7 +111,10 @@ background-image:url(:/new/prefix1/loginIMG.png);
      border: 2px solid #8f8f91;
      border-radius: 6px;
     }
-</string>
+QLineEdit:hover
+{
+    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+}</string>
    </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
