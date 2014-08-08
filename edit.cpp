@@ -29,13 +29,14 @@ void edit::on_pushButton_clicked()
 
     model->insertRows(1, 1);
     model->setData(model->index(1, 0), ID);
-    model->setData(model->index(1, 2), Sex);
-    model->setData(model->index(1, 3), HP);
-    model->setData(model->index(1, 4), Fee);
-    model->setData(model->index(1, 6), Grade);
-    model->setData(model->index(1, 7), Birth);
-    model->setData(model->index(1, 8), Major);
-    model->setData(model->index(1, 9), Name);
+    model->setData(model->index(1, 1), Sex);
+    model->setData(model->index(1, 2), HP);
+    model->setData(model->index(1, 3), Fee);
+    model->setData(model->index(1, 4), 1);
+    model->setData(model->index(1, 5), Grade);
+    model->setData(model->index(1, 6), Birth);
+    model->setData(model->index(1, 7), Major);
+    model->setData(model->index(1, 8), Name);
 
     model->submitAll();
     //Row Insert 하는거.
