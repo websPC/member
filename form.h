@@ -14,10 +14,10 @@ class Form : public QWidget
     Q_OBJECT
 
 public:
-    explicit Form(QWidget *parent = 0, QSqlTableModel *model = 0, QSqlTableModel *board = 0);
+    explicit Form(QWidget *parent = 0, QSqlTableModel *model = 0, QSqlTableModel *schedule = 0);
     ~Form();
     QSqlTableModel *model;
-    QSqlTableModel *board;
+    QSqlTableModel *schedule;
 
     Ui::Form *ui;
 
