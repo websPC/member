@@ -34,7 +34,6 @@ void EventEdit::on_pushButton_clicked()
     int count = board->rowCount();
     if(row != NULL)
     {
-
         board->setData(board->index(row, 0), row);
         board->setData(board->index(row, 1), title);
         board->setData(board->index(row, 2), contents);

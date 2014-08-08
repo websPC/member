@@ -15,7 +15,7 @@ class EventPlus : public QWidget
 
 public:
     QString date;
-    QSqlTableModel *board;
+    QSqlTableModel *schedule;
     QString title;
     int row;
 

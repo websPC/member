@@ -42,7 +42,7 @@
     <enum>QTabWidget::West</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <property name="usesScrollButtons">
     <bool>true</bool>
@@ -102,6 +102,17 @@
          <width>751</width>
          <height>531</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTableView {
+     selection-background-color: qlineargradient(x1: 0, y1: 0, x2: 0.5, y2: 0.5,
+                                 stop: 0 #FF92BB, stop: 1 white);
+ }
+
+QTableView QTableCornerButton::section {
+     background: red;
+     border: 2px outset red;
+ }</string>
        </property>
        <property name="sortingEnabled">
         <bool>true</bool>
@@ -261,7 +272,7 @@
       </rect>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="Event_Calender">
       <attribute name="title">
