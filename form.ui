@@ -17,6 +17,9 @@
    <iconset>
     <normaloff>../1404296263554.jpeg</normaloff>../1404296263554.jpeg</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QTabWidget" name="tabWidget_2">
    <property name="enabled">
     <bool>true</bool>
@@ -34,6 +37,12 @@
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <family>1훈버거버거 Regular</family>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -62,6 +71,76 @@
        <width>751</width>
        <height>551</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>1훈버거버거 Regular</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab {
+    color: #b1b1b1;
+    border: 1px solid #444;
+    border-bottom-style: none;
+    
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.05 rgba(14, 8, 73, 255), stop:0.227273 rgba(28, 17, 145, 255), stop:0.414773 rgba(126, 14, 81, 255), stop:0.579545 rgba(234, 11, 11, 255), stop:0.6875 rgba(244, 70, 5, 255), stop:0.818182 rgba(255, 136, 0, 255), stop:0.935 rgba(239, 236, 55, 255));
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    margin-right: -1px;
+}
+
+QTabWidget::pane {
+ 
+    border: 1px solid #444;
+    top: 1px;
+}
+
+QTabBar::tab:last
+{
+    margin-right: 0; /* the last selected tab has nothing to overlap with on the right */
+    border-top-right-radius: 3px;
+}
+
+QTabBar::tab:first:!selected
+{
+ margin-left: 0px; /* the last selected tab has nothing to overlap with on the right */
+
+
+    border-top-left-radius: 3px;
+}
+
+QTabBar::tab:!selected
+{
+    
+	color: #b1b1b1;
+    border-bottom-style: solid;
+    margin-top: 3px;
+    /*background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:.4 #343434);*/
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.05 rgba(14, 8, 73, 255), stop:0.227273 rgba(28, 17, 145, 255), stop:0.414773 rgba(126, 14, 81, 255), stop:0.579545 rgba(234, 11, 11, 255), stop:0.6875 rgba(244, 70, 5, 255), stop:0.818182 rgba(255, 136, 0, 255), stop:0.935 rgba(239, 236, 55, 255));
+
+}
+
+QTabBar::tab:selected
+{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin-bottom: 0px;
+}
+
+QTabBar::tab:!selected:hover
+{
+    /*border-top: 2px solid #ffaa00;
+    padding-bottom: 3px;*/
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    /*background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:0.4 #343434, stop:0.2 #343434, stop:0.1 #ffaa00);*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(14, 8, 73, 143), stop:0.227273 rgba(28, 17, 145, 130), stop:0.414773 rgba(126, 14, 81, 132), stop:0.579545 rgba(234, 11, 11, 114), stop:0.6875 rgba(244, 70, 5, 127), stop:0.818182 rgba(255, 136, 0, 123), stop:0.943182 rgba(239, 236, 55, 128));
+}
+</string>
      </property>
      <property name="tabPosition">
       <enum>QTabWidget::North</enum>
@@ -103,16 +182,19 @@
          <height>531</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>1훈버거버거 Regular</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">QTableView {
-     selection-background-color: qlineargradient(x1: 0, y1: 0, x2: 0.5, y2: 0.5,
-                                 stop: 0 #FF92BB, stop: 1 white);
- }
-
-QTableView QTableCornerButton::section {
-     background: red;
-     border: 2px outset red;
- }</string>
+        <string notr="true">
+border: 0px;
+ </string>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
        </property>
        <property name="sortingEnabled">
         <bool>true</bool>
@@ -138,6 +220,15 @@ QTableView QTableCornerButton::section {
          <height>531</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>1훈버거버거 Regular</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;</string>
+       </property>
        <property name="sortingEnabled">
         <bool>true</bool>
        </property>
@@ -159,6 +250,15 @@ QTableView QTableCornerButton::section {
          <height>531</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>1훈버거버거 Regular</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;</string>
+       </property>
        <attribute name="horizontalHeaderMinimumSectionSize">
         <number>78</number>
        </attribute>
@@ -177,6 +277,15 @@ QTableView QTableCornerButton::section {
          <height>531</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>1훈버거버거 Regular</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 0px;</string>
+       </property>
        <attribute name="horizontalHeaderMinimumSectionSize">
         <number>78</number>
        </attribute>
@@ -187,10 +296,38 @@ QTableView QTableCornerButton::section {
      <property name="geometry">
       <rect>
        <x>660</x>
-       <y>560</y>
-       <width>93</width>
-       <height>28</height>
+       <y>562</y>
+       <width>84</width>
+       <height>25</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>1훈버거버거 Regular</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"> QPushButton {
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 80px;
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:flat {
+     border: none; /* no border for a flat push button */
+ }
+
+ QPushButton:default {
+     border-color: navy; /* make the default button prominent */
+ }</string>
      </property>
      <property name="text">
       <string>EDIT</string>
@@ -200,28 +337,64 @@ QTableView QTableCornerButton::section {
      <property name="geometry">
       <rect>
        <x>511</x>
-       <y>1</y>
+       <y>3</y>
        <width>163</width>
        <height>19</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>1훈버거버거 Regular</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"> QLineEdit {
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+    }
+</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_5">
      <property name="geometry">
       <rect>
        <x>680</x>
-       <y>-1</y>
+       <y>0</y>
        <width>25</width>
        <height>25</height>
       </rect>
      </property>
      <property name="font">
       <font>
+       <family>1훈버거버거 Regular</family>
+       <pointsize>12</pointsize>
        <stylestrategy>PreferAntialias</stylestrategy>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/new/prefix1/Search.png);</string>
+      <string notr="true"> QPushButton {
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+    /* min-width: 80px;*/
+image: url(:/new/prefix1/Search.png);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:flat {
+     border: none; /* no border for a flat push button */
+ }
+
+ QPushButton:default {
+     border-color: navy; /* make the default button prominent */
+ }
+</string>
      </property>
      <property name="text">
       <string/>
@@ -246,8 +419,34 @@ QTableView QTableCornerButton::section {
        <height>25</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>1훈버거버거 Regular</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
      <property name="styleSheet">
-      <string notr="true">image: url(:/new/prefix1/refresh.png);</string>
+      <string notr="true"> QPushButton {
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+  image: url(:/new/prefix1/refresh.png);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:flat {
+     border: none; /* no border for a flat push button */
+ }
+
+ QPushButton:default {
+     border-color: navy; /* make the default button prominent */
+ }
+</string>
      </property>
      <property name="text">
       <string/>
@@ -277,6 +476,76 @@ QTableView QTableCornerButton::section {
        <height>601</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>1훈버거버거 Regular</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab {
+    color: #b1b1b1;
+    border: 1px solid #444;
+    border-bottom-style: none;
+    
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.05 rgba(14, 8, 73, 255), stop:0.227273 rgba(28, 17, 145, 255), stop:0.414773 rgba(126, 14, 81, 255), stop:0.579545 rgba(234, 11, 11, 255), stop:0.6875 rgba(244, 70, 5, 255), stop:0.818182 rgba(255, 136, 0, 255), stop:0.935 rgba(239, 236, 55, 255));
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    margin-right: -1px;
+}
+
+QTabWidget::pane {
+ 
+    border: 0px solid #444;
+    top: 1px;
+}
+
+QTabBar::tab:last
+{
+    margin-right: 0; /* the last selected tab has nothing to overlap with on the right */
+    border-top-right-radius: 3px;
+}
+
+QTabBar::tab:first:!selected
+{
+ margin-left: 0px; /* the last selected tab has nothing to overlap with on the right */
+
+
+    border-top-left-radius: 3px;
+}
+
+QTabBar::tab:!selected
+{
+    
+	color: #b1b1b1;
+    border-bottom-style: solid;
+    margin-top: 3px;
+    /*background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:.4 #343434);*/
+	
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.05 rgba(14, 8, 73, 255), stop:0.227273 rgba(28, 17, 145, 255), stop:0.414773 rgba(126, 14, 81, 255), stop:0.579545 rgba(234, 11, 11, 255), stop:0.6875 rgba(244, 70, 5, 255), stop:0.818182 rgba(255, 136, 0, 255), stop:0.935 rgba(239, 236, 55, 255));
+
+}
+
+QTabBar::tab:selected
+{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin-bottom: 0px;
+}
+
+QTabBar::tab:!selected:hover
+{
+    /*border-top: 2px solid #ffaa00;
+    padding-bottom: 3px;*/
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    /*background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:0.4 #343434, stop:0.2 #343434, stop:0.1 #ffaa00);*/
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(14, 8, 73, 143), stop:0.227273 rgba(28, 17, 145, 130), stop:0.414773 rgba(126, 14, 81, 132), stop:0.579545 rgba(234, 11, 11, 114), stop:0.6875 rgba(244, 70, 5, 127), stop:0.818182 rgba(255, 136, 0, 123), stop:0.943182 rgba(239, 236, 55, 128));
+}
+</string>
+     </property>
      <property name="currentIndex">
       <number>0</number>
      </property>
@@ -292,6 +561,12 @@ QTableView QTableCornerButton::section {
          <width>771</width>
          <height>571</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>1훈버거버거 Regular</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
       </widget>
      </widget>
@@ -407,8 +682,8 @@ QTableView QTableCornerButton::section {
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Gulim'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'1훈버거버거 Regular'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Gulim'; font-size:9pt;&quot;&gt;최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -418,8 +693,8 @@ p, li { white-space: pre-wrap; }
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Gulim'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'1훈버거버거 Regular'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Gulim'; font-size:9pt;&quot;&gt;최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -429,9 +704,9 @@ p, li { white-space: pre-wrap; }
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Gulim'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 &lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'1훈버거버거 Regular'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Gulim'; font-size:9pt;&quot;&gt;최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 최근 내역 &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Gulim'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -541,8 +816,8 @@ p, li { white-space: pre-wrap; }
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Gulim'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'1훈버거버거 Regular'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Gulim'; font-size:9pt;&quot;&gt;공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -552,8 +827,8 @@ p, li { white-space: pre-wrap; }
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Gulim'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'1훈버거버거 Regular'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Gulim'; font-size:9pt;&quot;&gt;공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -563,8 +838,8 @@ p, li { white-space: pre-wrap; }
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Gulim'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'1훈버거버거 Regular'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Gulim'; font-size:9pt;&quot;&gt;공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -574,8 +849,8 @@ p, li { white-space: pre-wrap; }
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Gulim'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'1훈버거버거 Regular'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Gulim'; font-size:9pt;&quot;&gt;공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
@@ -585,8 +860,8 @@ p, li { white-space: pre-wrap; }
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Gulim'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'1훈버거버거 Regular'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Gulim'; font-size:9pt;&quot;&gt;공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지 공지공지&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
