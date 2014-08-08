@@ -15,12 +15,12 @@ class EventPlus : public QWidget
 
 public:
     QString date;
-    QSqlTableModel *schedule;
+    QSqlTableModel *board;
     QString title;
     int row;
 
 public:
-    explicit EventPlus(QWidget *parent = 0, QString date = NULL, QSqlTableModel *schedule = NULL);
+    explicit EventPlus(QWidget *parent = 0, QString date = NULL, QSqlTableModel *board = NULL);
     ~EventPlus();
     Ui::EventPlus *ui;
 

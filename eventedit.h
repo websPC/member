@@ -14,12 +14,12 @@ class EventEdit : public QWidget
 
 public :
     QString title;
-    QSqlTableModel *schedule;
+    QSqlTableModel *board;
     QString date;
     int row;
 
 public:
-    explicit EventEdit(QWidget *parent = 0, QString title = NULL, QSqlTableModel *schedule = 0, QString date = 0, int row = 0);
+    explicit EventEdit(QWidget *parent = 0, QString title = NULL, QSqlTableModel *board = 0, QString date = 0, int row = 0);
     ~EventEdit();
     Ui::EventEdit *ui;
 private slots:

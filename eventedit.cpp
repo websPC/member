@@ -2,18 +2,18 @@
 #include "eventedit.h"
 #include "ui_eventedit.h"
 
-EventEdit::EventEdit(QWidget *parent, QString title, QSqlTableModel *schedule, QString date, int row) :
+EventEdit::EventEdit(QWidget *parent, QString title, QSqlTableModel *board, QString date, int row) :
     QWidget(parent),
     ui(new Ui::EventEdit)
 {
     ui->setupUi(this);
     this->title = title;
-    this->schedule = schedule;
+    this->board = board;
     this->date = date;
     this->row = row;
     QSqlQueryModel *query = new QSqlQueryModel;
     QSqlQuery qry;
-    qry.prepare("select * from schedule where title = ?");
+    qry.prepare("select * from board where title = ?");
     qry.addBindValue(title);
     qry.exec();
     query->setQuery(qry);
@@ -31,26 +31,26 @@ void EventEdit::on_pushButton_clicked()
 
     QString title = ui->lineEdit->text();
     QString contents = ui->textEdit->toPlainText();
-    int count = schedule->rowCount();
+    int count = board->rowCount();
     if(row != NULL)
     {
 
-        schedule->setData(schedule->index(row, 0), row);
-        schedule->setData(schedule->index(row, 1), title);
-        schedule->setData(schedule->index(row, 2), contents);
-        schedule->setData(schedule->index(row, 3), "A");
-        schedule->setData(schedule->index(row, 4), date);
-        schedule->submitAll();
+        board->setData(board->index(row, 0), row);
+        board->setData(board->index(row, 1), title);
+        board->setData(board->index(row, 2), contents);
+        board->setData(board->index(row, 3), "A");
+        board->setData(board->index(row, 4), date);
+        board->submitAll();
     }
     else
     {
-        schedule->insertRows(count, 1);
-        schedule->setData(schedule->index(count, 0), count);
-        schedule->setData(schedule->index(count, 1), title);
-        schedule->setData(schedule->index(count, 2), contents);
-        schedule->setData(schedule->index(count, 3), "A");
-        schedule->setData(schedule->index(count, 4), date);
-        schedule->submitAll();
+        board->insertRows(count, 1);
+        board->setData(board->index(count, 0), count);
+        board->setData(board->index(count, 1), title);
+        board->setData(board->index(count, 2), contents);
+        board->setData(board->index(count, 3), "A");
+        board->setData(board->index(count, 4), date);
+        board->submitAll();
     }
 }
 

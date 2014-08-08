@@ -32,13 +32,13 @@ void Login::on_pushButton_clicked()
     model->setHeaderData(9, Qt::Horizontal, QObject::tr("Image"));
 
 
-    QSqlTableModel *schedule = new QSqlTableModel();
-    schedule->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
-    schedule->setHeaderData(1, Qt::Horizontal, QObject::tr("Name"));
-    schedule->setHeaderData(2, Qt::Horizontal, QObject::tr("Major"));
-    schedule->setHeaderData(3, Qt::Horizontal, QObject::tr("Graduate"));
-    schedule->setHeaderData(4, Qt::Horizontal, QObject::tr("Level"));
-    Form *new_page = new Form(0, model, schedule);
+    QSqlTableModel *board = new QSqlTableModel();
+    board->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+    board->setHeaderData(1, Qt::Horizontal, QObject::tr("Name"));
+    board->setHeaderData(2, Qt::Horizontal, QObject::tr("Major"));
+    board->setHeaderData(3, Qt::Horizontal, QObject::tr("Graduate"));
+    board->setHeaderData(4, Qt::Horizontal, QObject::tr("Level"));
+    Form *new_page = new Form(0, model, board);
 
     new_page->show();
     this->close();

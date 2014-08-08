@@ -2,7 +2,7 @@
 #include "ui_form.h"
 #include <time.h>
 
-Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule) :
+Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *board) :
     QWidget(parent),
     ui(new Ui::Form)
 {
@@ -11,7 +11,7 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule) :
     QSqlQueryModel *Main = new QSqlQueryModel();
     Main->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where Level > 1");
     ui->tableView_6->setModel(Main);
-    this->schedule = schedule;
+    this->board = board;
 
     QSqlQueryModel *view_OB = new QSqlQueryModel();
     QSqlQueryModel *view_YB = new QSqlQueryModel();
@@ -52,7 +52,7 @@ void Form:: on_listWidget_2_itemClicked(QListWidgetItem *item){
 void Form::on_calendarWidget_clicked(const QDate &date)
 {
     QString day = date.toString("yyyyMMdd");
-    EventPlus *new_page = new EventPlus(0, day, schedule);
+    EventPlus *new_page = new EventPlus(0, day, board);
     new_page->show();
 }
 
