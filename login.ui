@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>300</y>
+     <y>292</y>
      <width>91</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
    <property name="font">
@@ -40,8 +40,8 @@
  
     padding: 3px;
    
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 QPushButton:pressed
@@ -67,6 +67,15 @@ QPushButton:hover
      <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>1훈버거버거 Regular</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
    <property name="styleSheet">
     <string notr="true"> QLineEdit {
      border: 2px solid #8f8f91;
@@ -76,6 +85,12 @@ QLineEdit:hover
 {
     border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
 }</string>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label">

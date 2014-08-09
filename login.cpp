@@ -8,6 +8,7 @@ Login::Login(QWidget *parent) :
 {
     ui->setupUi(this);
     createConnection();
+    ui->lineEdit->setFocus();
 }
 
 Login::~Login()
