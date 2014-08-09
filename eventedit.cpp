@@ -31,13 +31,22 @@ void EventEdit::on_pushButton_clicked()
     QString title = ui->lineEdit->text();
     QString contents = ui->textEdit->toPlainText();
     int count = schedule->rowCount();
+    int type;
+    if(ui->radioButton->isChecked())
+        type = 0;
+    else if(ui->radioButton_2->isChecked())
+        type = 1;
+    else if(ui->radioButton_3->isChecked())
+        type = 2;
+    else if(ui->radioButton_4->isChecked())
+        type = 3;
     if(row != NULL)
     {
         schedule->setData(schedule->index(row, 0), row);
         schedule->setData(schedule->index(row, 1), row);
         schedule->setData(schedule->index(row, 2), date);
         schedule->setData(schedule->index(row, 3), title);
-        schedule->setData(schedule->index(row, 4), 1);
+        schedule->setData(schedule->index(row, 4), type);
         schedule->setData(schedule->index(row, 5), contents);
 
         schedule->submitAll();
@@ -49,7 +58,7 @@ void EventEdit::on_pushButton_clicked()
         schedule->setData(schedule->index(count, 1), count);
         schedule->setData(schedule->index(count, 2), date);
         schedule->setData(schedule->index(count, 3), title);
-        schedule->setData(schedule->index(count, 4), 1);
+        schedule->setData(schedule->index(count, 4), type);
         schedule->setData(schedule->index(count, 5), contents);
         schedule->submitAll();
     }

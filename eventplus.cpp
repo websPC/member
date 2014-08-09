@@ -50,7 +50,7 @@ EventPlus::~EventPlus()
 void EventPlus::on_pushButton_3_clicked()
 {
         this->title = "";
-    this->row = 0;
+        this->row = 0;
         EventEdit *new_page = new EventEdit(0, title, schedule, date, row);
         new_page->show();
 }
