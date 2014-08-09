@@ -27,35 +27,22 @@ EventPlus::~EventPlus()
     delete ui;
 }
 
-//void EventPlus::on_listWidget_itemClicked(QListWidgetItem *item)
-//{
-//    this->title = item->text();
-//    QSqlQueryModel *board3 = new QSqlQueryModel();
-//    QSqlQuery *query = new QSqlQuery;
-
-//    query->prepare("select * from schedule where Title = ? ");
-//    query->addBindValue(title);
-//    query->exec();
-//    board3->setQuery(*query);
-
-//    this->row=board3->record(0).value("id").toInt();
-//    EventEdit *new_page = new EventEdit(0, title, schedule, date, row);
-//    new_page->show();
-//}
-
 void EventPlus::on_pushButton_3_clicked()
 {
-        this->title = "";
-        this->row = 0;
-        EventEdit *new_page = new EventEdit(0, title, schedule, date, row);
-        new_page->show();
+    this->title = "";
+    this->row = 0;
+    EventEdit *new_page = new EventEdit(0, title, schedule, date, row);
+    new_page->show();
 }
 
 void EventPlus::on_pushButton_clicked()
 {
     int item = ui->toolBox_2->currentIndex();
     this->title = ui->toolBox_2->itemText(item);
-    this->row = 0;
+    for(int i = 0; i < schedule->rowCount(); i++){
+        if(title == schedule->record(i).value("title").toString() && date == schedule->record(i).value("date").toString())
+            this->row = i;
+    }
     EventEdit *new_page = new EventEdit(0, title, schedule, date, row);
     new_page->show();
 }
@@ -70,4 +57,8 @@ void EventPlus::on_pushButton_2_clicked()
     qry.addBindValue(date);
     qry.exec();
     ui->toolBox_2->removeItem(item);
+    for(int i = 0; i < schedule->rowCount(); i++){
+        if(title == schedule->record(i).value("title").toString() && date == schedule->record(i).value("date").toString())
+            schedule->removeRow(i);
+    }
 }
