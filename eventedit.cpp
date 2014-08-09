@@ -31,7 +31,7 @@ void EventEdit::on_pushButton_clicked()
     QString title = ui->lineEdit->text();
     QString contents = ui->textEdit->toPlainText();
     int count = schedule->rowCount();
-    int type;
+    int type = 0;
     if(ui->radioButton->isChecked())
         type = 0;
     else if(ui->radioButton_2->isChecked())

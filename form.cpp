@@ -23,10 +23,10 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule) :
 
     view_OB->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where Grd = 'YES'");
     ui->tableView_5->setModel(view_OB);
-ui->tableView_5->resizeColumnsToContents();
+    ui->tableView_5->resizeColumnsToContents();
     view_YB->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where Grd = 'NO'");
     ui->tableView_3->setModel(view_YB);
-ui->tableView_3->resizeColumnsToContents();
+    ui->tableView_3->resizeColumnsToContents();
     view_NotMember->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where level = 1");
     ui->tableView_4->setModel(view_NotMember);
     ui->tableView_4->resizeColumnsToContents();
