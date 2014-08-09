@@ -225,7 +225,7 @@ QTabBar::tab:!selected:hover
     <enum>QTabWidget::West</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <property name="usesScrollButtons">
     <bool>true</bool>
@@ -707,6 +707,9 @@ QLineEdit:hover
     border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
 }</string>
      </property>
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
+     </property>
     </widget>
     <widget class="QPushButton" name="pushButton_5">
      <property name="geometry">
@@ -820,7 +823,7 @@ QPushButton:hover
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>771</width>
+       <width>765</width>
        <height>601</height>
       </rect>
      </property>
@@ -835,6 +838,7 @@ QPushButton:hover
     color: #b1b1b1;
     border: 1px solid #8f8f91;
     border-bottom-style: none;
+    border-right-style: none;
     background-color: #323232;
     padding-left: 10px;
     padding-right: 10px;
@@ -899,7 +903,7 @@ QTabBar::tab:!selected:hover
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>771</width>
+         <width>760</width>
          <height>571</height>
         </rect>
        </property>
