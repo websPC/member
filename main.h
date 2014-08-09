@@ -12,6 +12,7 @@
 #include <QWidget>
 #include <QSqlTableModel>
 #include <QSqlRecord>
+#include <QDebug>
 #include "form.h"
 #include "eventplus.h"
 #include "eventedit.h"

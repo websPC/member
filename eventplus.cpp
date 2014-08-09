@@ -20,10 +20,8 @@ EventPlus::EventPlus(QWidget *parent, QString date, QSqlTableModel *schedule) :
             label->setStyleSheet("font: 13pt \"1훈버거버거 Regular\";");
             label->setText(schedule->record(i).value("Contents").toString());
             ui->toolBox_2->addItem(label ,schedule->record(i).value("Title").toString());
-
         }
     }
-
 }
 
 EventPlus::~EventPlus()
@@ -53,4 +51,18 @@ void EventPlus::on_pushButton_3_clicked()
         this->row = 0;
         EventEdit *new_page = new EventEdit(0, title, schedule, date, row);
         new_page->show();
+}
+
+void EventPlus::on_pushButton_clicked()
+{
+    int item = ui->toolBox_2->currentIndex();
+    this->title = ui->toolBox_2->itemText(item);
+    this->row = 0;
+    EventEdit *new_page = new EventEdit(0, title, schedule, date, row);
+    new_page->show();
+}
+
+void EventPlus::on_pushButton_2_clicked()
+{
+
 }
