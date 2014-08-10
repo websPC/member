@@ -13,12 +13,21 @@ EventEdit::EventEdit(QWidget *parent, QString title, QSqlTableModel *schedule, Q
     this->row = row;
     QSqlQueryModel *query = new QSqlQueryModel;
     QSqlQuery qry;
-    qry.prepare("select * from schedule where title = ?");
+    qry.prepare("select * from schedule where title = ? and date = ?");
     qry.addBindValue(title);
+    qry.addBindValue(date);
     qry.exec();
     query->setQuery(qry);
     ui->lineEdit->setText(query->record(0).value("title").toString());
     ui->textEdit->setText(query->record(0).value("contents").toString());
+    if(query->record(0).value("type").toInt() == 0)
+        ui->radioButton->setChecked(true);
+    else if(query->record(0).value("type").toInt() == 1)
+        ui->radioButton_2->setChecked(true);
+    else if(query->record(0).value("type").toInt() == 2)
+        ui->radioButton_3->setChecked(true);
+    else if(query->record(0).value("type").toInt() == 3)
+        ui->radioButton_4->setChecked(true);
 }
 
 EventEdit::~EventEdit()
@@ -33,6 +42,7 @@ void EventEdit::on_pushButton_clicked()
     int count = schedule->rowCount();
     int max = count;
     int type = 0;
+
     if(ui->radioButton->isChecked())
         type = 0;
     else if(ui->radioButton_2->isChecked())
@@ -41,6 +51,7 @@ void EventEdit::on_pushButton_clicked()
         type = 2;
     else if(ui->radioButton_4->isChecked())
         type = 3;
+
     if(max != 0){
         for(int i = 0; i < schedule->rowCount(); i++){
             if(max < schedule->record(i).value("ID").toInt())
