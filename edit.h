@@ -12,9 +12,10 @@ class edit : public QWidget
     Q_OBJECT
 
 public:
-    explicit edit(QWidget *parent = 0, QSqlTableModel *model = 0);
+    explicit edit(QWidget *parent = 0, QSqlTableModel *model = 0, QString Id = NULL);
     ~edit();
     QSqlTableModel *model;
+    QString Id;
 
 private slots:
     void on_pushButton_clicked();

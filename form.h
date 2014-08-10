@@ -18,6 +18,7 @@ public:
     ~Form();
     QSqlTableModel *model;
     QSqlTableModel *schedule;
+    QString Id;
 
     Ui::Form *ui;
 
@@ -32,6 +33,11 @@ private slots:
     void on_pushButton_5_clicked();
 
     void on_pushButton_6_clicked();
+
+    void on_tableView_6_clicked(const QModelIndex &index);
+    void on_tableView_5_clicked(const QModelIndex &index);
+    void on_tableView_3_clicked(const QModelIndex &index);
+    void on_tableView_4_doubleClicked(const QModelIndex &index);
 
     void on_listWidget_2_activated(const QModelIndex &index);
 };
