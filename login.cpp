@@ -46,7 +46,17 @@ void Login::on_pushButton_clicked()
         schedule->setHeaderData(4, Qt::Horizontal, QObject::tr("Type"));
         schedule->setHeaderData(5, Qt::Horizontal, QObject::tr("Contents"));
 
-        Form *new_page = new Form(0, model, schedule);
+        QSqlTableModel *Sonjinho = new QSqlTableModel();
+        Sonjinho->setTable("Sonjinho");
+        Sonjinho->select();
+        Sonjinho->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
+        Sonjinho->setHeaderData(1, Qt::Horizontal, QObject::tr("GName"));
+        Sonjinho->setHeaderData(2, Qt::Horizontal, QObject::tr("Name"));
+        Sonjinho->setHeaderData(3, Qt::Horizontal, QObject::tr("Sex"));
+        Sonjinho->setHeaderData(4, Qt::Horizontal, QObject::tr("HP"));
+        Sonjinho->setHeaderData(5, Qt::Horizontal, QObject::tr("Major"));
+
+        Form *new_page = new Form(0, model, schedule, Sonjinho);
 
         new_page->show();
         this->close();
