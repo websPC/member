@@ -76,7 +76,7 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule, QSq
             QLabel *label;
             label = new QLabel;
 
-            label->setStyleSheet("qproperty-alignment: AlignTop;""font: 13pt;");
+            label->setStyleSheet("font: 13pt");
 
             label->setText(schedule->record(i).value("Type").toString()+"\n"+schedule->record(i).value("Contents").toString());
             ui->toolBox_2->addItem(label ,schedule->record(i).value("Title").toString());
@@ -90,7 +90,7 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule, QSq
             QLabel *label;
             label = new QLabel;
 
-            label->setStyleSheet("qproperty-alignment: AlignTop;""font: 13pt;");
+            label->setStyleSheet("font: 13pt");
 
            label->setText(schedule->record(i).value("Type").toString()+"\n"+schedule->record(i).value("Contents").toString());
             ui->toolBox_3->addItem(label ,schedule->record(i).value("Title").toString());
@@ -103,7 +103,7 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule, QSq
           if(schedule->record(i).value("Date").toString() == current){
             QLabel *label;
             label = new QLabel;
-            label->setStyleSheet("qproperty-alignment: AlignTop;""font: 13pt;");
+            label->setStyleSheet("font: 13pt");
 
             label->setText(schedule->record(i).value("Type").toString()+"\n"+schedule->record(i).value("Contents").toString());
             ui->toolBox_4->addItem(label ,schedule->record(i).value("Title").toString());

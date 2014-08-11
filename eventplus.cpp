@@ -16,7 +16,7 @@ EventPlus::EventPlus(QWidget *parent, QString date, QSqlTableModel *schedule) :
             QLabel *label;
             label = new QLabel;
 
-            label->setStyleSheet("qproperty-alignment: AlignTop;""font: 13pt \"1훈버거버거 Regular\";");
+            label->setStyleSheet("font: 13pt");
 
             label->setText(schedule->record(i).value("Type").toString()+"\n"+schedule->record(i).value("Contents").toString());
             ui->toolBox_2->addItem(label ,schedule->record(i).value("Title").toString());

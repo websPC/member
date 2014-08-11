@@ -19,13 +19,12 @@
 #include "eventedit.h"
 #include "edit.h"
 #include "login.h"
-#include <QFontDatabase>
+
 static bool createConnection(){
     QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
     db.setDatabaseName("Driver={SQL Server};Server=tcp:q07m0fx4lg.database.windows.net;Port=1433;Database=WPG_DB;Uid=WPG_DB@q07m0fx4lg;Pwd=!Greatewebs;Encrypt=yes;Connection Timeout=30;");
     if(!db.open()) return false;
     return true;
 }
-
 
 #endif // MAIN_H

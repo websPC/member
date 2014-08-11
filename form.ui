@@ -924,7 +924,7 @@ QTabBar::tab:!selected:hover
       <attribute name="title">
        <string>Recent</string>
       </attribute>
-      <widget class="QWidget" name="layoutWidget">
+      <widget class="QWidget" name="">
        <property name="geometry">
         <rect>
          <x>190</x>
@@ -958,7 +958,7 @@ QTabBar::tab:!selected:hover
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>40</height>
+            <height>50</height>
            </size>
           </property>
           <property name="font">
@@ -1025,6 +1025,7 @@ padding-left: 10px;
            <attribute name="label">
             <string>쪽</string>
            </attribute>
+           <zorder>toolBox_3</zorder>
           </widget>
          </widget>
         </item>
@@ -1049,7 +1050,7 @@ padding-left: 10px;
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>40</height>
+            <height>50</height>
            </size>
           </property>
           <property name="font">
@@ -1140,7 +1141,7 @@ padding-left: 10px;
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>40</height>
+            <height>50</height>
            </size>
           </property>
           <property name="font">
@@ -1207,6 +1208,7 @@ padding-left: 10px;
            <attribute name="label">
             <string>쪽</string>
            </attribute>
+           <zorder>toolBox_2</zorder>
           </widget>
          </widget>
         </item>
