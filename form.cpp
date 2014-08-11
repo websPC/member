@@ -43,7 +43,7 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule) :
           if(schedule->record(i).value("Date").toString() == current){
             QLabel *label;
             label = new QLabel;
-
+            label->setWordWrap(true);
             label->setStyleSheet("qproperty-alignment: AlignTop;""font: 13pt;");
 
             label->setText(schedule->record(i).value("Type").toString()+"\n"+schedule->record(i).value("Contents").toString());
@@ -57,7 +57,7 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule) :
           if(schedule->record(i).value("Date").toString() == current){
             QLabel *label;
             label = new QLabel;
-
+            label->setWordWrap(true);
             label->setStyleSheet("qproperty-alignment: AlignTop;""font: 13pt;");
 
            label->setText(schedule->record(i).value("Type").toString()+"\n"+schedule->record(i).value("Contents").toString());
@@ -72,7 +72,7 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule) :
             QLabel *label;
             label = new QLabel;
             label->setStyleSheet("qproperty-alignment: AlignTop;""font: 13pt;");
-
+            label->setWordWrap(true);
             label->setText(schedule->record(i).value("Type").toString()+"\n"+schedule->record(i).value("Contents").toString());
             ui->toolBox_4->addItem(label ,schedule->record(i).value("Title").toString());
         }
@@ -91,16 +91,7 @@ void Form::on_pushButton_clicked()
     new_edit->show();
 }
 
-void Form:: on_listWidget_2_itemClicked(QListWidgetItem *item){
-   if(item->text() == "+"){
-        EventEdit *new_page = new EventEdit();
-        new_page->show();
-   }
-   else if(item->text() == "Today"){
-       EventPlus *new_page = new EventPlus();
-       new_page->show();
-   }
-}
+
 
 void Form::on_calendarWidget_clicked(const QDate &date)
 {

@@ -24,7 +24,7 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-    void on_listWidget_2_itemClicked(QListWidgetItem *item);
+
 
     void on_calendarWidget_clicked(const QDate &date);
 

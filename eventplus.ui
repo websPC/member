@@ -206,7 +206,7 @@ QPushButton:pressed {
    <property name="font">
     <font>
      <family>1훈버거버거 Regular</family>
-     <pointsize>26</pointsize>
+     <pointsize>20</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
@@ -261,7 +261,7 @@ padding-left: 10px;
       <x>0</x>
       <y>0</y>
       <width>400</width>
-      <height>451</height>
+      <height>459</height>
      </rect>
     </property>
     <attribute name="label">
