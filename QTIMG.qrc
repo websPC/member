@@ -1,15 +1,15 @@
 <RCC>
-  <qresource prefix="/new/prefix1">
-    <file>right_arr.png</file>
-    <file>arrow_down.png</file>
-    <file>loginIMG.png</file>
-    <file>logo.png</file>
-    <file>MfJ3TLy.jpg</file>
-    <file>loginIMG.jpg</file>
-    <file>2093334207_RDpC5LUv_2.jpg</file>
-    <file>1.jpg</file>
-    <file>~2.jpg</file>
-    <file>refresh.png</file>
-    <file>Search.png</file>
-  </qresource>
+    <qresource prefix="/new/prefix1">
+        <file>right_arr.png</file>
+        <file>arrow_down.png</file>
+        <file>loginIMG.png</file>
+        <file>logo.png</file>
+        <file>MfJ3TLy.jpg</file>
+        <file>loginIMG.jpg</file>
+        <file>2093334207_RDpC5LUv_2.jpg</file>
+        <file>1.jpg</file>
+        <file>~2.jpg</file>
+        <file>refresh.png</file>
+        <file>Search.png</file>
+    </qresource>
 </RCC>

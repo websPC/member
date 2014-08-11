@@ -20,10 +20,12 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget
+   <string notr="true">
+QWidget
 {
 color: #b1b1b1;
 background-color: #323232;
+font: &quot;1훈버거버거 Regular&quot;;
 }
 QWidget:item:hover
 {
@@ -204,7 +206,7 @@ QPushButton:pressed {
    <property name="font">
     <font>
      <family>1훈버거버거 Regular</family>
-     <pointsize>25</pointsize>
+     <pointsize>26</pointsize>
      <weight>50</weight>
      <bold>false</bold>
     </font>
@@ -259,7 +261,7 @@ padding-left: 10px;
       <x>0</x>
       <y>0</y>
       <width>400</width>
-      <height>453</height>
+      <height>451</height>
      </rect>
     </property>
     <attribute name="label">
