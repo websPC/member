@@ -2,10 +2,12 @@
 #include "ui_form.h"
 #include <time.h>
 
+
 Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule) :
     QWidget(parent),
     ui(new Ui::Form)
 {
+
     ui->setupUi(this);
 
     this->model = model;
@@ -30,6 +32,52 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule) :
     view_NotMember->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where level = 1");
     ui->tableView_4->setModel(view_NotMember);
     ui->tableView_4->resizeColumnsToContents();
+
+    ui->toolBox_2->removeItem(0);
+    ui->toolBox_3->removeItem(0);
+    ui->toolBox_4->removeItem(0);
+    QDate date = QDate::currentDate();
+    QString current = date.toString("yyyyMMdd");
+
+    for(int i = 0; i < schedule->rowCount(); i++){
+          if(schedule->record(i).value("Date").toString() == current){
+            QLabel *label;
+            label = new QLabel;
+
+            label->setStyleSheet("font: 13pt");
+
+            label->setText(schedule->record(i).value("Type").toString()+"\n"+schedule->record(i).value("Contents").toString());
+            ui->toolBox_2->addItem(label ,schedule->record(i).value("Title").toString());
+        }
+    }
+
+    current = date.addDays(1).toString("yyyyMMdd");
+
+    for(int i = 0; i < schedule->rowCount(); i++){
+          if(schedule->record(i).value("Date").toString() == current){
+            QLabel *label;
+            label = new QLabel;
+
+            label->setStyleSheet("font: 13pt");
+
+           label->setText(schedule->record(i).value("Type").toString()+"\n"+schedule->record(i).value("Contents").toString());
+            ui->toolBox_3->addItem(label ,schedule->record(i).value("Title").toString());
+        }
+    }
+    date.addDays(1);
+    current = date.addDays(2).toString("yyyyMMdd");
+
+    for(int i = 0; i < schedule->rowCount(); i++){
+          if(schedule->record(i).value("Date").toString() == current){
+            QLabel *label;
+            label = new QLabel;
+            label->setStyleSheet("font: 13pt");
+
+            label->setText(schedule->record(i).value("Type").toString()+"\n"+schedule->record(i).value("Contents").toString());
+            ui->toolBox_4->addItem(label ,schedule->record(i).value("Title").toString());
+        }
+    }
+
 }
 
 Form::~Form()

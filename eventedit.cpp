@@ -1,6 +1,8 @@
 #include "main.h"
 #include "eventedit.h"
 #include "ui_eventedit.h"
+#include "qstring.h"
+#include <QTextCodec>
 
 EventEdit::EventEdit(QWidget *parent, QString title, QSqlTableModel *schedule, QString date, int row) :
     QWidget(parent),
@@ -20,13 +22,13 @@ EventEdit::EventEdit(QWidget *parent, QString title, QSqlTableModel *schedule, Q
     query->setQuery(qry);
     ui->lineEdit->setText(query->record(0).value("title").toString());
     ui->textEdit->setText(query->record(0).value("contents").toString());
-    if(query->record(0).value("type").toInt() == 0)
+    if(query->record(0).value("type").toString() == "결혼")
         ui->radioButton->setChecked(true);
-    else if(query->record(0).value("type").toInt() == 1)
+    else if(query->record(0).value("type").toString() == "생일")
         ui->radioButton_2->setChecked(true);
-    else if(query->record(0).value("type").toInt() == 2)
+    else if(query->record(0).value("type").toString() == "WEBS행사")
         ui->radioButton_3->setChecked(true);
-    else if(query->record(0).value("type").toInt() == 3)
+    else if(query->record(0).value("type").toString() == "기타")
         ui->radioButton_4->setChecked(true);
 }
 
@@ -41,16 +43,16 @@ void EventEdit::on_pushButton_clicked()
     QString contents = ui->textEdit->toPlainText();
     int count = schedule->rowCount();
     int max = count;
-    int type = 0;
+    QString type = NULL;
 
     if(ui->radioButton->isChecked())
-        type = 0;
+        type = ui->radioButton->text();
     else if(ui->radioButton_2->isChecked())
-        type = 1;
+        type = ui->radioButton_2->text();
     else if(ui->radioButton_3->isChecked())
-        type = 2;
+        type = ui->radioButton_3->text();
     else if(ui->radioButton_4->isChecked())
-        type = 3;
+        type =ui->radioButton_4->text();
 
     if(max != 0){
         for(int i = 0; i < schedule->rowCount(); i++){
@@ -83,6 +85,7 @@ void EventEdit::on_pushButton_clicked()
         schedule->submitAll();
     }
 }
+
 
 void EventEdit::on_textEdit_textChanged()
 {
