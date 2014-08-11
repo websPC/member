@@ -3,7 +3,7 @@
 #include <time.h>
 
 
-Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule, QSqlTableModel *Sonjinho) :
+Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule) :
     QWidget(parent),
     ui(new Ui::Form)
 {
@@ -11,7 +11,6 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule, QSq
     ui->setupUi(this);
 
     this->model = model;
-    this->Sonjinho = Sonjinho;
     this->schedule = schedule;
     this->Id = "";
 
@@ -33,37 +32,6 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule, QSq
     view_NotMember->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member where level = 1");
     ui->tableView_4->setModel(view_NotMember);
     ui->tableView_4->resizeColumnsToContents();
-
-    QSqlQueryModel *hello1 = new QSqlQueryModel();
-    hello1->setQuery("select distinct GName from Sonjinho");
-    for(int i = 0; i < hello1->rowCount(); i++){
-
-        QTabWidget *hu = new QTabWidget();
-        hu->setTabPosition(hu->West);
-        ui->hello->addTab(hu,hello1->record(i).value("GName").toString());
-
-        QString A[3] ={"Member" ,"Schedule" , "Edit" };
-        QTableView *Mem = new QTableView();
-        QCalendarWidget *Sch = new QCalendarWidget();
-        QTableView *Edi = new QTableView();
-        hu->addTab(Mem,A[0]);
-        hu->addTab(Sch,A[1]);
-        hu->addTab(Edi,A[2]);
-
-        QSqlQueryModel *qMem = new QSqlQueryModel();
-        QSqlQuery *qMem1 = new QSqlQuery;
-        qMem1->prepare("select * from Sonjinho where GName = ?");
-        qMem1->addBindValue(hello1->record(i).value("GName").toString());
-        qMem1->exec();
-        qMem->setQuery(*qMem1);
-        Mem->setModel(qMem);
-        Mem->resizeColumnsToContents();
-
-        QSqlQueryModel *qEdi = new QSqlQueryModel();
-        qEdi->setQuery("select ID,Name,Major,SEX,Birth,HP,FEES,Grd from member ");
-        Edi->setModel(qEdi);
-        Edi->resizeColumnsToContents();
-        }
 
     ui->toolBox_2->removeItem(0);
     ui->toolBox_3->removeItem(0);
@@ -109,7 +77,6 @@ Form::Form(QWidget *parent, QSqlTableModel *model, QSqlTableModel *schedule, QSq
             ui->toolBox_4->addItem(label ,schedule->record(i).value("Title").toString());
         }
     }
-
 
 }
 

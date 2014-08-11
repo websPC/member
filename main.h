@@ -13,7 +13,6 @@
 #include <QSqlTableModel>
 #include <QSqlRecord>
 #include <QDebug>
-#include <QListWidgetItem>
 #include "form.h"
 #include "eventplus.h"
 #include "eventedit.h"
